@@ -1,20 +1,44 @@
 @charset "UTF-8";
 
+@import "tailwindcss";
+@plugin "daisyui";
+
 html,
 body {
-    width: 320px;
-    height: 560px;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background: #FFFFFF;
+    background: #fafafa;
     overflow-x: hidden;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    color: #4a4a4a;
+    overflow-y: hidden;
+    color: #111111;
     font-family: Roboto, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, sans-serif;
-    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
+    font-size: 13px;
+    scrollbar-width: thin;
+}
+
+@media (min-width: 20rem) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 48rem) {
+    html,
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 80rem) {
+    html,
+    body {
+        font-size: 16px;
+    }
 }
