@@ -1,0 +1,11 @@
+{
+  "AppName": {
+    "message": "eBase58 - Base58 encoding and decoding tool"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "The Base58 encoding tool can convert strings to Base58 encoding format, commonly used in blockchain addresses and other scenarios."
+  }
+}
