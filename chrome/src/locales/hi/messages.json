@@ -1,0 +1,20 @@
+{
+  "AppName": {
+    "message": "eBase58 - Base58 एन्कोडिंग और डिकोडिंग टूल"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "Base58 एन्कोडिंग टूल स्ट्रिंग्स को Base58 एन्कोडिंग फॉर्मेट में बदल सकता है, जो आमतौर पर ब्लॉकचेन एड्रेस और अन्य परिस्थितियों में उपयोग होता है।"
+  },
+  "ConvertButton": {
+    "message": "Base58 में बदलें"
+  },
+  "ConvertFailed": {
+    "message": "परिवर्तन विफल रहा"
+  },
+  "InputPlaceholder": {
+    "message": "कृपया टेक्स्ट दर्ज करें"
+  }
+}

@@ -7,5 +7,14 @@
   },
   "AppDescription": {
     "message": "The Base58 encoding tool can convert strings to Base58 encoding format, commonly used in blockchain addresses and other scenarios."
+  },
+  "ConvertButton": {
+    "message": "Convert to Base58"
+  },
+  "ConvertFailed": {
+    "message": "Conversion failed"
+  },
+  "InputPlaceholder": {
+    "message": "'Please input text'"
   }
 }

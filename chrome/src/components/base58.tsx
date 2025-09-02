@@ -14,12 +14,12 @@ export function Base58Component({lang}: { lang: string }) {
                 <textarea value={sourceText}
                           onChange={(event) => setSourceText(event.target.value)}
                           maxLength={1024}
-                          placeholder={localText(lang, '请输入文本内容', 'Please input text')}></textarea>
+                          placeholder={localText(lang, 'InputPlaceholder')}></textarea>
         </div>
         <div className={styles.actionContainer}>
             <button onClick={() => {
                 if (!sourceText) {
-                    setError(localText(lang, '请输入文本内容', 'Please input text'))
+                    setError(localText(lang, 'InputPlaceholder'))
                     return
                 }
                 try {
@@ -27,10 +27,10 @@ export function Base58Component({lang}: { lang: string }) {
                     const text = stringToBase58(sourceText)
                     setEncodedText(text)
                 } catch (e) {
-                    setError(localText(lang, '转换失败', 'Conversion failed'))
+                    setError(localText(lang, 'ConvertFailed'))
                 }
             }}>
-                {localText(lang, '转换为Base58', 'Convert to Base58')}
+                {localText(lang, 'ConvertButton')}
             </button>
         </div>
         <div className={styles.errorContainer}>

@@ -1,0 +1,20 @@
+{
+  "AppName": {
+    "message": "eBase58 - Base58エンコードおよびデコードツール"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "Base58エンコードツールは、文字列をBase58エンコード形式に変換できます。これは主にブロックチェーンアドレスやその他のシナリオで使用されます。"
+  },
+  "ConvertButton": {
+    "message": "Base58に変換"
+  },
+  "ConvertFailed": {
+    "message": "変換に失敗しました"
+  },
+  "InputPlaceholder": {
+    "message": "テキストを入力してください"
+  }
+}

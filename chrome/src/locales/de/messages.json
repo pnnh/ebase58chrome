@@ -1,0 +1,20 @@
+{
+  "AppName": {
+    "message": "eBase58 - Base58 Kodierungs- und Dekodierungswerkzeug"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "Das Base58-Kodierungswerkzeug kann Zeichenfolgen in das Base58-Kodierungsformat umwandeln, das häufig in Blockchain-Adressen und anderen Szenarien verwendet wird."
+  },
+  "ConvertButton": {
+    "message": "In Base58 umwandeln"
+  },
+  "ConvertFailed": {
+    "message": "Umwandlung fehlgeschlagen"
+  },
+  "InputPlaceholder": {
+    "message": "Bitte Text eingeben"
+  }
+}

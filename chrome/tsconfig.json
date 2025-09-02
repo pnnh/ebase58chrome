@@ -1,28 +1,32 @@
 {
   "compilerOptions": {
     "types": [
-      "node"
+      "node",
+      "chrome"
     ],
-    "target": "ES2020",
+    "target": "ESNext",
+    "outDir": "./dist/",
+    "rootDir": "./src",
     "useDefineForClassFields": true,
     "lib": [
-      "ES2020",
+      "ESNext",
       "DOM",
       "DOM.Iterable"
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    /* Linting */
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": [
@@ -31,7 +35,8 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "public"
   ],
   "exclude": [
     "node_modules",
