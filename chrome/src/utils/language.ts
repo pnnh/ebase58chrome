@@ -24,8 +24,42 @@ export const langZhTW = 'zh-TW' // Traditional Chinese
 export const defaultLanguage = langEn
 
 export const supportedLanguages = [
-    langEn, langEs, langFr, langDe, langJa, langRu, langHi,
-    langZh, langZhans, langZhant, langZhCN, langZhTW
+    {
+        key: langEn, name: 'English'
+    },
+    {
+        key: langEs, name: 'Español'
+    },
+    {
+        key: langFr, name: 'Français'
+    },
+    {
+        key: langDe, name: 'Deutsch'
+    },
+    {
+        key: langRu, name: 'Русский'
+    },
+    {
+        key: langHi, name: 'हिन्दी'
+    },
+    // {
+    //     key: langZh, name: '简体中文'
+    // },
+    {
+        key: langJa, name: '日本語'
+    },
+    {
+        key: langZhCN, name: '简体中文'
+    },
+    // {
+    //     key: langZhans, name: '简体中文'
+    // },
+    {
+        key: langZhTW, name: '繁體中文'
+    },
+    // {
+    //     key: langZhant, name: '繁體中文'
+    // },
 ]
 
 export const languageDataMap: { [key: string]: typeof langEnData } = {
@@ -44,7 +78,11 @@ export const languageDataMap: { [key: string]: typeof langEnData } = {
 }
 
 export function isSupportedLanguage(lang: string): boolean {
-    return supportedLanguages.includes(lang)
+    return supportedLanguages.findIndex(item => item.key === lang) !== -1
+}
+
+export function getLangInfo(lang: string): { key: string, name: string } | undefined {
+    return supportedLanguages.find(item => item.key === lang)
 }
 
 export function getLanguageData(lang: string): typeof langEnData {

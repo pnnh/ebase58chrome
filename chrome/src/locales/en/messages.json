@@ -15,6 +15,6 @@
     "message": "Conversion failed"
   },
   "InputPlaceholder": {
-    "message": "'Please input text'"
+    "message": "Please input text"
   }
 }

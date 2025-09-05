@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@use '@/layout/styles/theme' as *;
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -9,10 +16,10 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: #fafafa;
+    background: $backgroundColor;
     overflow-x: hidden;
     overflow-y: hidden;
-    color: #111111;
+    color: $textColor;
     font-family: Roboto, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -22,21 +29,26 @@ body {
     scrollbar-width: thin;
 }
 
-@media (min-width: 20rem) {
+body.dark-theme {
+    --background-color: #000000;
+    --text-color: #ffffff;
+}
+
+@media (min-width: $screenSmallWidth) {
     html,
     body {
         font-size: 14px;
     }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: $screenMediumWidth) {
     html,
     body {
         font-size: 15px;
     }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: $screenLargeWidth) {
     html,
     body {
         font-size: 16px;

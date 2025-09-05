@@ -4,12 +4,17 @@ import {useState} from "react";
 import styles from './base58.module.scss'
 import {localText} from "@/utils/language.ts";
 import {stringToBase58} from "@/utils/base58.ts";
+import {useAtom} from "jotai";
+import {globalLanguageAtom} from "@/layout/language.tsx";
 
-export function Base58Component({lang}: { lang: string }) {
+export function Base58Component() {
     const [sourceText, setSourceText] = useState('')
     const [encodedText, setEncodedText] = useState('')
     const [error, setError] = useState('')
+    const [globalLang, setGlobalLang] = useAtom(globalLanguageAtom);
+    const lang = globalLang
     return <div className={styles.base58Component}>
+        <h1 className={styles.productTitle}>{localText(globalLang, 'AppName')}</h1>
         <div className={styles.textContainer}>
                 <textarea value={sourceText}
                           onChange={(event) => setSourceText(event.target.value)}

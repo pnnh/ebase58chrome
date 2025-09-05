@@ -1,0 +1,6 @@
+@use '@/layout/styles/theme' as *;
+
+.themeIcon {
+  color: $textColor;
+  background: $backgroundColor;
+}

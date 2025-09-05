@@ -4,15 +4,22 @@ import {langEn, localText} from "@/utils/language.ts";
 import {Base58Component} from "@/components/base58.tsx";
 import {ToolsLayout} from "@/layout/layout.tsx";
 import {useLoaderData} from "react-router";
+import {useEffect} from "react";
+import {useAtom} from "jotai";
+import {globalLanguageAtom} from "@/layout/language.tsx";
 
-export function Base58Page({}: {}) {
+export function Base58Page() {
     let data = useLoaderData();
-    const lang = (data as any).lang || langEn
+    const routeLang = (data as any).lang || langEn
+    const [globalLang, setGlobalLang] = useAtom(globalLanguageAtom);
+    useEffect(() => {
+        if (!globalLang) {
+            setGlobalLang(routeLang)
+        }
+    }, [routeLang])
     return <ToolsLayout>
         <div className={styles.base58Page}>
-            ==={JSON.stringify(data)}==
-            <h1 className={styles.productTitle}>{localText(lang, 'AppName')}</h1>
-            <Base58Component lang={lang}/>
+            <Base58Component/>
         </div>
     </ToolsLayout>
 }

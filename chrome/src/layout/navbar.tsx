@@ -1,8 +1,8 @@
 import styles from './navbar.module.scss'
-import AppsIcon from '@mui/icons-material/Apps';
+import {PSLanguageSelector} from "@/layout/language.tsx";
+import {ThemeSwitch} from "@/layout/theme.tsx";
 
-export function ContentPublicNavbar({}: {
-}) {
+export function ContentPublicNavbar() {
     return <div className={styles.navHeader}>
         <div className={styles.leftNav}>
             <a className={styles.brandLink} href={`/`}>
@@ -10,7 +10,8 @@ export function ContentPublicNavbar({}: {
             </a>
         </div>
         <div className={styles.rightNav}>
-            <a className={styles.toolsLink} href={`/`}><AppsIcon/></a>
+            <ThemeSwitch/>
+            <PSLanguageSelector />
         </div>
     </div>
 }
