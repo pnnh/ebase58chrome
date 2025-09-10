@@ -11,6 +11,12 @@
   "ConvertButton": {
     "message": "Base58 में बदलें"
   },
+  "ClearButton": {
+    "message": "सामग्री साफ़ करें"
+  },
+  "CopyButton": {
+    "message": "सामग्री कॉपी करें"
+  },
   "ConvertFailed": {
     "message": "परिवर्तन विफल रहा"
   },

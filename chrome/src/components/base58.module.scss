@@ -18,10 +18,14 @@
     margin: 1rem 0 1rem 0;
     background-color: $backgroundColor;
     color: $textColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
     textarea {
       width: calc(100% - 2rem);
-      height: 100px;
+      min-height: 8rem;
       padding: 1rem;
       font-size: 1rem;
       border: 1px solid #ccc;
@@ -34,18 +38,10 @@
   }
 
   .actionContainer {
-    margin: 1rem 0 1rem 0;
-
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background: #127af8;
-      color: #fff;
-    }
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
   }
 
   .errorContainer {
@@ -60,10 +56,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12rem;
-    border-radius: 4px;
     background-color: $backgroundColor;
     color: $textColor;
+    .resultText {
+      min-height: 12rem;
+      border-radius: 4px;
+      padding: 1rem;
+      font-size: 1rem;
+      width: calc(100% - 2rem);
+      border: 1px solid #ccc;
+
+    }
   }
+}
+
+.resultActionContainer {
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 

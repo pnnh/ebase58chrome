@@ -11,6 +11,12 @@
   "ConvertButton": {
     "message": "Base58に変換"
   },
+  "ClearButton": {
+    "message": "内容をクリア"
+  },
+  "CopyButton": {
+    "message": "内容をコピー"
+  },
   "ConvertFailed": {
     "message": "変換に失敗しました"
   },

@@ -11,6 +11,12 @@
   "ConvertButton": {
     "message": "In Base58 umwandeln"
   },
+  "ClearButton": {
+    "message": "Inhalt löschen"
+  },
+  "CopyButton": {
+    "message": "Inhalt kopieren"
+  },
   "ConvertFailed": {
     "message": "Umwandlung fehlgeschlagen"
   },

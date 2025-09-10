@@ -11,6 +11,12 @@
   "ConvertButton": {
     "message": "转换为 Base58"
   },
+  "ClearButton": {
+    "message": "清空内容"
+  },
+  "CopyButton": {
+    "message": "拷贝内容"
+  },
   "ConvertFailed": {
     "message": "转换失败"
   },
