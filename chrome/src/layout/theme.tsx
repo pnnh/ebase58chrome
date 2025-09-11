@@ -1,12 +1,36 @@
 'use client';
 
-import { createTheme } from '@mui/material/styles';
-import LightModeIcon from "@mui/icons-material/LightMode";
+import {createTheme} from '@mui/material/styles';
 import styles from './theme.module.scss'
-import {getStorage, setStorage} from "@/utils/storage.ts";
+import {getStorage, setStorage} from "@/utils/storage";
 import {atom, useAtom} from 'jotai'
+import {atomWithStorage} from "jotai/utils";
+import {useState} from "react";
+import {StyledMenu} from "@/components/dropmenu.tsx";
+import MenuItem from "@mui/material/MenuItem";
+import {localText} from "@/utils/language.ts";
+import {globalLanguageAtom} from "@/layout/language.tsx";
+import ContrastIcon from '@mui/icons-material/Contrast';
 
-export const globalThemeAtom = atom('')
+const ThemeKey = 'WETheme'
+
+function getInitialTheme() {
+    const storageThemeName = getStorage(ThemeKey) as string
+    let targetTheme = ''
+    if (storageThemeName === 'light' || storageThemeName === 'dark') {
+        targetTheme = storageThemeName
+    } else {
+        // 默认跟随系统
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        targetTheme = isDark ? 'dark' : 'light'
+    }
+    window.document.body.classList.add(`${targetTheme}-theme`);
+    return targetTheme
+}
+
+const initialTheme = getInitialTheme()
+
+export const globalThemeAtom = atomWithStorage(ThemeKey, initialTheme)
 
 const lightTheme = createTheme({
     cssVariables: true,
@@ -40,22 +64,59 @@ const darkTheme = createTheme({
     },
 })
 
-const ThemeKey = 'WETheme'
-
-export {lightTheme,darkTheme, ThemeKey};
+export {lightTheme, darkTheme, ThemeKey};
 
 export function ThemeSwitch() {
-    // const [globalTheme, setGlobalTheme] = useAtom(globalThemeAtom)
-    const switchTheme = () => {
-        const storageThemeName = getStorage(ThemeKey) as string
-        // setGlobalTheme(globalTheme === 'light' ? 'dark' : 'light')
-        const isDark = storageThemeName === 'dark'
-        if (isDark) {
-            setStorage(ThemeKey, 'light')
-        } else {
-            setStorage(ThemeKey, 'dark')
-        }
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const [theme, setTheme] = useAtom(globalThemeAtom)
+    const [globalLanguage] = useAtom(globalLanguageAtom)
+
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const switchTheme = (targetTheme: string) => {
+        setTheme(targetTheme);
+        setAnchorEl(null);
+
+        // const classNames = Array.from(window.document.body.classList)
+        // for (const name of classNames) {
+        //     if (name.endsWith('-theme')) {
+        //         window.document.body.classList.remove(name)
+        //     }
+        // }
+        // const themeClassName = `${targetTheme}-theme`
+        // window.document.body.classList.add(themeClassName)
         window.location.reload()
     }
-    return <LightModeIcon className={styles.themeIcon} sx={{cursor: 'pointer'}} onClick={switchTheme}/>
+    return <>
+        <div className={styles.themeSelector}
+             onClick={handleClick}>
+            <ContrastIcon className={styles.themeIcon} sx={{cursor: 'pointer'}}/>
+            {theme === 'auto' ? localText(globalLanguage, "AutoTheme") : theme === 'light' ?
+                localText(globalLanguage, "LightTheme") : localText(globalLanguage, "DarkTheme")}
+        </div>
+        <StyledMenu
+            elevation={0}
+            anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+            }}
+            transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+            }}
+            anchorEl={anchorEl}
+            open={open}>
+            <MenuItem onClick={() => switchTheme('auto')} disableRipple>
+                {localText(globalLanguage, "AutoTheme")}
+            </MenuItem>
+            <MenuItem onClick={() => switchTheme('light')} disableRipple>
+                {localText(globalLanguage, "LightTheme")}
+            </MenuItem>
+            <MenuItem onClick={() => switchTheme('dark')} disableRipple>
+                {localText(globalLanguage, "DarkTheme")}
+            </MenuItem>
+        </StyledMenu>
+    </>
 }

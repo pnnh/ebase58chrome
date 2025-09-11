@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "请输入文本"
+  },
+  "AutoTheme": {
+    "message": "自动"
+  },
+  "LightTheme": {
+    "message": "浅色"
+  },
+  "DarkTheme": {
+    "message": "深色"
   }
 }

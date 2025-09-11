@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "कृपया टेक्स्ट दर्ज करें"
+  },
+  "AutoTheme": {
+    "message": "स्वचालित"
+  },
+  "LightTheme": {
+    "message": "हल्का"
+  },
+  "DarkTheme": {
+    "message": "गहरा"
   }
 }

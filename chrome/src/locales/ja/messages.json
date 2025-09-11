@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "テキストを入力してください"
+  },
+  "AutoTheme": {
+    "message": "自動"
+  },
+  "LightTheme": {
+    "message": "ライト"
+  },
+  "DarkTheme": {
+    "message": "ダーク"
   }
 }

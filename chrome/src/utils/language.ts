@@ -16,9 +16,9 @@ export const langJa = 'ja' // Japanese
 export const langRu = 'ru' // Russian
 export const langHi = 'hi' // Hindi
 export const langZh = 'zh'
-export const langZhans = 'zh-Hans' // Simplified Chinese
-export const langZhant = 'zh-Hant' // Traditional Chinese
-export const langZhCN = 'zh-CN' // Simplified Chinese
+// export const langZhans = 'zh-Hans' // Simplified Chinese
+// export const langZhant = 'zh-Hant' // Traditional Chinese
+// export const langZhCN = 'zh-CN' // Simplified Chinese
 export const langZhTW = 'zh-TW' // Traditional Chinese
 
 export const defaultLanguage = langEn
@@ -49,7 +49,7 @@ export const supportedLanguages = [
         key: langJa, name: '日本語'
     },
     {
-        key: langZhCN, name: '简体中文'
+        key: langZh, name: '简体中文'
     },
     // {
     //     key: langZhans, name: '简体中文'
@@ -71,62 +71,40 @@ export const languageDataMap: { [key: string]: typeof langEnData } = {
     [langRu]: langRuData,
     [langHi]: langHiData,
     [langZh]: langZhCNData,
-    [langZhans]: langZhCNData,
-    [langZhant]: langZhTWData,
-    [langZhCN]: langZhCNData,
+    // [langZhans]: langZhCNData,
+    // [langZhant]: langZhTWData,
+    // [langZhCN]: langZhCNData,
     [langZhTW]: langZhTWData,
 }
 
-export function isSupportedLanguage(lang: string): boolean {
-    return supportedLanguages.findIndex(item => item.key === lang) !== -1
-}
-
 export function getLangInfo(lang: string): { key: string, name: string } | undefined {
-    return supportedLanguages.find(item => item.key === lang)
+    const targetLang = getLangDefault(lang, defaultLanguage)
+    return supportedLanguages.find(item => item.key === targetLang)
 }
 
 export function getLanguageData(lang: string): typeof langEnData {
-    if (isSupportedLanguage(lang) && languageDataMap[lang]) {
-        return languageDataMap[lang]
+    const targetLang = getLangDefault(lang, defaultLanguage)
+    const langData = languageDataMap[targetLang]
+    if (langData) {
+        return langData
     }
-    return langEnData
+    return languageDataMap[defaultLanguage]
 }
 
-export function getLangDefault(lang: string): string {
-    if (isSupportedLanguage(lang)) {
-        return lang
+export function getLangDefault(wantLang: string, fallbackLang: string): string {
+    if (!wantLang || wantLang === 'auto') {
+        wantLang = navigator.language;
     }
-    if (lang === 'zh-CN' || lang === 'zh-SG' || lang === 'zh-Hans') {
+    if (supportedLanguages.findIndex(item => item.key === wantLang) !== -1) {
+        return wantLang
+    }
+    if (wantLang === 'zh-CN' || wantLang === 'zh-SG' || wantLang === 'zh-Hans') {
         return langZh
     }
-    if (lang === 'zh-TW' || lang === 'zh-HK' || lang === 'zh-MO' || lang === 'zh-Hant') {
-        return langZhant
+    if (wantLang === 'zh-TW' || wantLang === 'zh-HK' || wantLang === 'zh-MO' || wantLang === 'zh-Hant') {
+        return langZhTW
     }
-    return defaultLanguage
-}
-
-export function getLanguageFromPathname(pathname: string): string | undefined {
-    const segments = pathname.split('/')
-    if (segments.length > 1 && isSupportedLanguage(segments[1])) {
-        return segments[1]
-    }
-    return undefined
-}
-
-export function replaceLanguageInPathname(pathname: string, lang: string): string {
-    if (!isSupportedLanguage(lang)) {
-        lang = defaultLanguage
-    }
-    const segments = pathname.split('/')
-    if (segments.length > 1 && isSupportedLanguage(segments[1])) {
-        segments[1] = lang
-    } else {
-        segments.splice(1, 0, lang)
-    }
-    const newPath = segments.join('/')
-    if (newPath.endsWith('/'))
-        return newPath.substring(0, newPath.length - 1) // 去掉最后的斜杠
-    return newPath
+    return fallbackLang
 }
 
 export function localText(lang: string, keyName: keyof typeof langEnData): string {

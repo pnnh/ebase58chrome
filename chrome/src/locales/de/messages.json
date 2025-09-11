@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "Bitte Text eingeben"
+  },
+  "AutoTheme": {
+    "message": "Automatisch"
+  },
+  "LightTheme": {
+    "message": "Hell"
+  },
+  "DarkTheme": {
+    "message": "Dunkel"
   }
 }

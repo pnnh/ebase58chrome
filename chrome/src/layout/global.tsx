@@ -11,15 +11,12 @@ export function GlobalLayout({
                                            }: {
     children: React.ReactNode
 }) {
-    const storageThemeName = getStorage(ThemeKey) as string
     const [globalTheme, setGlobalTheme] = useAtom(globalThemeAtom)
-    useEffect(() => {
-        if (!globalTheme) {
-            setGlobalTheme(storageThemeName)
-            window.document.body.classList.add(`${storageThemeName}-theme`)
-        }
-    }, [storageThemeName])
-    const currentTheme = (globalTheme||storageThemeName) === 'dark' ? darkTheme : lightTheme
+    // useEffect(() => {
+    //     const themeClassName = `${globalTheme}-theme`
+    //     window.document.body.classList.add(themeClassName)
+    // }, [globalTheme])
+    const currentTheme = (globalTheme) === 'dark' ? darkTheme : lightTheme
     return <JotaiProvider>
             <ThemeProvider theme={currentTheme}>
                 {children}

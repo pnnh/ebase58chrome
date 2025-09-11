@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "Пожалуйста, введите текст"
+  },
+  "AutoTheme": {
+    "message": "Авто"
+  },
+  "LightTheme": {
+    "message": "Светлая"
+  },
+  "DarkTheme": {
+    "message": "Темная"
   }
 }

@@ -3,58 +3,18 @@
 import styles from './language.module.scss';
 
 import * as React from 'react';
-import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {alpha, styled} from "@mui/system";
-import {getLangInfo, langEn, langZh, langZhant, supportedLanguages} from "@/utils/language.ts";
+import {getLangDefault, getLangInfo, langEn, supportedLanguages} from "@/utils/language.ts";
 import {atom, useAtom} from 'jotai'
 import LanguageIcon from '@mui/icons-material/Language';
+import {atomWithStorage} from "jotai/utils"
+import {StyledMenu} from "@/components/dropmenu.tsx";
 
-export const globalLanguageAtom = atom('')
+const LanguageKey = 'WELanguage'
 
-const StyledMenu = styled((props: MenuProps) => (
-    <Menu
-        elevation={0}
-        anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'right',
-        }}
-        transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-        }}
-        {...props}
-    />
-))(({ theme }) => ({
-    '& .MuiPaper-root': {
-        borderRadius: 6,
-        marginTop: theme.spacing(1),
-        minWidth: '6rem',
-        boxShadow:
-            'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-        '& .MuiMenu-list': {
-            padding: '2px 0',
-            '& .MuiMenuItem-root': {
-                padding: '2px 8px',
-                minHeight: '2rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-            },
-        },
-        '& .MuiMenuItem-root': {
-            '& .MuiSvgIcon-root': {
-                marginRight: theme.spacing(1),
-            },
-            '&:active': {
-                backgroundColor: alpha(
-                    theme.palette.primary.main,
-                    theme.palette.action.selectedOpacity,
-                ),
-            },
-        },
-    },
-}));
+const initialLanguage = getLangDefault(navigator.language, langEn)
+
+export const globalLanguageAtom = atomWithStorage(LanguageKey, initialLanguage)
 
 export function PSLanguageSelector() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -88,7 +48,10 @@ export function PSLanguageSelector() {
                 horizontal: 'right',
             }}
             anchorEl={anchorEl}
-            open={open} >
+            open={open}>
+            <MenuItem  onClick={() =>goUrl('auto')} disableRipple>
+                Auto
+            </MenuItem>
             {
                 supportedLanguages.map(language => (
                     <MenuItem key={language.key} onClick={() =>goUrl(language.key)} disableRipple>
@@ -96,21 +59,6 @@ export function PSLanguageSelector() {
                     </MenuItem>
                 ))
             }
-            {/*<MenuItem onClick={handleClose} disableRipple>*/}
-            {/*    <div className={styles.langItem} onClick={()=>goUrl(langEn)}>*/}
-            {/*        English*/}
-            {/*    </div>*/}
-            {/*</MenuItem>*/}
-            {/*<MenuItem onClick={handleClose} disableRipple>*/}
-            {/*    <div className={styles.langItem} onClick={()=>goUrl(langZh)}>*/}
-            {/*    简体中文*/}
-            {/*    </div>*/}
-            {/*</MenuItem>*/}
-            {/*<MenuItem onClick={handleClose} disableRipple>*/}
-            {/*    <div className={styles.langItem} onClick={()=>goUrl(langZhant)}>*/}
-            {/*    繁体中文*/}
-            {/*    </div>*/}
-            {/*</MenuItem>*/}
         </StyledMenu>
     </>
 }

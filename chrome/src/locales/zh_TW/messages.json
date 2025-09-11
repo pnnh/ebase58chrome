@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "請輸入文字"
+  },
+  "AutoTheme": {
+    "message": "自動"
+  },
+  "LightTheme": {
+    "message": "淺色"
+  },
+  "DarkTheme": {
+    "message": "深色"
   }
 }

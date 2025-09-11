@@ -23,7 +23,7 @@ export function Base58Component() {
     };
 
     return <div className={styles.base58Component}>
-        <h1 className={styles.productTitle}>{localText(globalLang, 'AppName')}</h1>
+        <h1 className={styles.productTitle}>{localText(lang, 'AppName')}</h1>
         <div className={styles.textContainer}>
                 <textarea value={sourceText}
                           onChange={(event) => setSourceText(event.target.value)}

@@ -22,5 +22,14 @@
   },
   "InputPlaceholder": {
     "message": "Veuillez saisir du texte"
+  },
+  "AutoTheme": {
+    "message": "Automatique"
+  },
+  "LightTheme": {
+    "message": "Clair"
+  },
+  "DarkTheme": {
+    "message": "Sombre"
   }
 }
