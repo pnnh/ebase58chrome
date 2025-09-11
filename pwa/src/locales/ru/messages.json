@@ -1,0 +1,38 @@
+{
+  "AppName": {
+    "message": "eBase58 - инструмент для кодирования и декодирования Base58"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "Инструмент кодирования Base58 может преобразовывать строки в формат кодирования Base58, который часто используется в адресах блокчейна и других сценариях."
+  },
+  "ConvertButton": {
+    "message": "Преобразовать в Base58"
+  },
+  "ClearButton": {
+    "message": "Очистить содержимое"
+  },
+  "CopyButton": {
+    "message": "Скопировать содержимое"
+  },
+  "ConvertFailed": {
+    "message": "Преобразование не удалось"
+  },
+  "InputPlaceholder": {
+    "message": "Пожалуйста, введите текст"
+  },
+  "AutoTheme": {
+    "message": "Авто"
+  },
+  "LightTheme": {
+    "message": "Светлая"
+  },
+  "DarkTheme": {
+    "message": "Темная"
+  },
+  "ResultPlaceholder": {
+    "message": "Результат преобразования"
+  }
+}
