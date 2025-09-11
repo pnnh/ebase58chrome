@@ -31,5 +31,8 @@
   },
   "DarkTheme": {
     "message": "Oscuro"
+  },
+  "ResultPlaceholder": {
+    "message": "Resultado de la conversión"
   }
 }

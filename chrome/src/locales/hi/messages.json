@@ -31,5 +31,8 @@
   },
   "DarkTheme": {
     "message": "गहरा"
+  },
+  "ResultPlaceholder": {
+    "message": "परिवर्तन परिणाम"
   }
 }

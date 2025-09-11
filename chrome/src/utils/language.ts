@@ -1,12 +1,13 @@
-import langEnData from '@/locales/en/messages.json' with { type: 'json' }
-import langEsData from '@/locales/es/messages.json' with { type: 'json' }
-import langFrData from '@/locales/fr/messages.json' with { type: 'json' }
-import langDeData from '@/locales/de/messages.json' with { type: 'json' }
-import langJaData from '@/locales/ja/messages.json' with { type: 'json' }
-import langRuData from '@/locales/ru/messages.json' with { type: 'json' }
-import langHiData from '@/locales/hi/messages.json' with { type: 'json' }
-import langZhCNData from '@/locales/zh_CN/messages.json' with { type: 'json' }
-import langZhTWData from '@/locales/zh_TW/messages.json' with { type: 'json' }
+import langEnData from '@/locales/en/messages.json' with {type: 'json'}
+import langEsData from '@/locales/es/messages.json' with {type: 'json'}
+import langFrData from '@/locales/fr/messages.json' with {type: 'json'}
+import langDeData from '@/locales/de/messages.json' with {type: 'json'}
+import langJaData from '@/locales/ja/messages.json' with {type: 'json'}
+import langRuData from '@/locales/ru/messages.json' with {type: 'json'}
+import langHiData from '@/locales/hi/messages.json' with {type: 'json'}
+import langZhCNData from '@/locales/zh_CN/messages.json' with {type: 'json'}
+import langZhTWData from '@/locales/zh_TW/messages.json' with {type: 'json'}
+import {isRunningInChromeExtension} from "@/utils/config.ts";
 
 export const langEn = 'en'
 export const langEs = 'es' // Spanish

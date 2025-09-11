@@ -92,7 +92,7 @@ export function ThemeSwitch() {
     return <>
         <div className={styles.themeSelector}
              onClick={handleClick}>
-            <ContrastIcon className={styles.themeIcon} sx={{cursor: 'pointer'}}/>
+            <ContrastIcon className={styles.themeIcon} aria-hidden={undefined} sx={{cursor: 'pointer'}}/>
             {theme === 'auto' ? localText(globalLanguage, "AutoTheme") : theme === 'light' ?
                 localText(globalLanguage, "LightTheme") : localText(globalLanguage, "DarkTheme")}
         </div>

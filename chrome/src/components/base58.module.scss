@@ -8,12 +8,14 @@
     color: #4a4a4a;
     margin: 1rem 0 1rem 0;
   }
+
   .productTitle {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     margin: 1rem 0;
     text-align: center;
   }
+
   .textContainer {
     margin: 1rem 0 1rem 0;
     background-color: $backgroundColor;
@@ -24,7 +26,7 @@
     align-items: center;
 
     textarea {
-      width: calc(100% - 2rem);
+      width: calc(100% - 4rem);
       min-height: 8rem;
       padding: 1rem;
       font-size: 1rem;
@@ -35,6 +37,13 @@
       color: $textColor;
       outline: none;
     }
+  }
+
+  .flavorContainer {
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
   }
 
   .actionContainer {
@@ -58,22 +67,28 @@
     align-items: center;
     background-color: $backgroundColor;
     color: $textColor;
+
     .resultText {
       min-height: 12rem;
       border-radius: 4px;
       padding: 1rem;
       font-size: 1rem;
-      width: calc(100% - 2rem);
+      width: calc(100% - 4rem);
       border: 1px solid #ccc;
+      word-break: break-all;
 
+      .resultTips {
+        font-size: 0.9rem;
+        color: #888;
+      }
     }
   }
 }
 
 .resultActionContainer {
-    margin: 1rem 0 1rem 1rem;
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+  margin: 1rem 0 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 

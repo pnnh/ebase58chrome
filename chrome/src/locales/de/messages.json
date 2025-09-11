@@ -31,5 +31,8 @@
   },
   "DarkTheme": {
     "message": "Dunkel"
+  },
+  "ResultPlaceholder": {
+    "message": "Umwandlung Ergebnis"
   }
 }

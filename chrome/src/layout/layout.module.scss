@@ -1,3 +1,4 @@
+@use '@/layout/styles/theme' as *;
 
 .templateContainer {
   display: flex;
@@ -19,7 +20,7 @@
     overflow-y: auto;
 
     .bodyContainer {
-      height: 100vh;
+      height: calc(100vh - $navbarHeight - 1rem);
       width: 100vw;
       display: flex;
       flex-direction: row;

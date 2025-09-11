@@ -1,10 +1,11 @@
-
-import Menu, { MenuProps } from '@mui/material/Menu';
+import Menu, {MenuProps} from '@mui/material/Menu';
 import {alpha, styled} from "@mui/system";
 
 const StyledMenu = styled((props: MenuProps) => (
     <Menu
         elevation={0}
+        disablePortal={true}
+        aria-hidden={undefined}
         anchorOrigin={{
             vertical: 'bottom',
             horizontal: 'right',
@@ -13,9 +14,15 @@ const StyledMenu = styled((props: MenuProps) => (
             vertical: 'top',
             horizontal: 'right',
         }}
+        closeAfterTransition={false}
+        slotProps={{
+            root: {
+                'aria-hidden': undefined, // 移除 aria-hidden
+            }
+        }}
         {...props}
     />
-))(({ theme }) => ({
+))(({theme}) => ({
     '& .MuiPaper-root': {
         borderRadius: 6,
         marginTop: theme.spacing(1),

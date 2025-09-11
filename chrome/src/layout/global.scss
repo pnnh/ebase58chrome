@@ -36,6 +36,11 @@ body.dark-theme {
   --text-color: #ffffff;
 }
 
+html.chrome-mode {
+  width: 400px;
+  height: 600px;
+}
+
 @media (min-width: $screenSmallWidth) {
   html,
   body {

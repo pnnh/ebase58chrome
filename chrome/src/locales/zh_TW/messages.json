@@ -31,5 +31,8 @@
   },
   "DarkTheme": {
     "message": "深色"
+  },
+  "ResultPlaceholder": {
+    "message": "轉換結果"
   }
 }
