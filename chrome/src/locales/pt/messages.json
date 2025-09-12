@@ -1,0 +1,38 @@
+{
+  "AppName": {
+    "message": "eBase58 - Ferramenta de codificação e decodificação Base58"
+  },
+  "AppShortName": {
+    "message": "eBase58"
+  },
+  "AppDescription": {
+    "message": "A ferramenta de codificação Base58 pode converter cadeias de texto para o formato Base58, comumente usado em endereços de blockchain e outros cenários."
+  },
+  "ConvertButton": {
+    "message": "Converter para Base58"
+  },
+  "ClearButton": {
+    "message": "Limpar conteúdo"
+  },
+  "CopyButton": {
+    "message": "Copiar conteúdo"
+  },
+  "ConvertFailed": {
+    "message": "Falha na conversão"
+  },
+  "InputPlaceholder": {
+    "message": "Digite o texto"
+  },
+  "AutoTheme": {
+    "message": "Automático"
+  },
+  "LightTheme": {
+    "message": "Claro"
+  },
+  "DarkTheme": {
+    "message": "Escuro"
+  },
+  "ResultPlaceholder": {
+    "message": "Resultado da conversão"
+  }
+}
