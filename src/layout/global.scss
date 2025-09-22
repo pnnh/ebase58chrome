@@ -14,8 +14,8 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-  min-width: 20rem;
-  min-height: 20rem;
+  min-width: 100vw;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background: $backgroundColor;
@@ -36,9 +36,9 @@ body.dark-theme {
   --text-color: #ffffff;
 }
 
-html.chrome-mode {
+html.chrome-mode, body.chrome-mode {
   width: 400px;
-  height: 600px;
+  height: 600px;  // chrome 扩展限制的最大高度
 }
 
 @media (min-width: $screenSmallWidth) {

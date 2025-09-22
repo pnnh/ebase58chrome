@@ -4,10 +4,10 @@ import langFrData from '@/locales/fr/messages.json' with {type: 'json'}
 import langDeData from '@/locales/de/messages.json' with {type: 'json'}
 import langJaData from '@/locales/ja/messages.json' with {type: 'json'}
 import langRuData from '@/locales/ru/messages.json' with {type: 'json'}
+import langPtData from '@/locales/pt/messages.json' with {type: 'json'}
 import langHiData from '@/locales/hi/messages.json' with {type: 'json'}
 import langZhCNData from '@/locales/zh_CN/messages.json' with {type: 'json'}
 import langZhTWData from '@/locales/zh_TW/messages.json' with {type: 'json'}
-import {isRunningInChromeExtension} from "@/utils/config.ts";
 
 export const langEn = 'en'
 export const langEs = 'es' // Spanish
@@ -16,6 +16,7 @@ export const langDe = 'de' // German
 export const langJa = 'ja' // Japanese
 export const langRu = 'ru' // Russian
 export const langHi = 'hi' // Hindi
+export const langPt = 'pt' // Portuguese
 export const langZh = 'zh'
 // export const langZhans = 'zh-Hans' // Simplified Chinese
 // export const langZhant = 'zh-Hant' // Traditional Chinese
@@ -39,6 +40,9 @@ export const supportedLanguages = [
     },
     {
         key: langRu, name: 'Русский'
+    },
+    {
+        key: langPt, name: 'Português'
     },
     {
         key: langHi, name: 'हिन्दी'
@@ -70,6 +74,7 @@ export const languageDataMap: { [key: string]: typeof langEnData } = {
     [langDe]: langDeData,
     [langJa]: langJaData,
     [langRu]: langRuData,
+    [langPt]: langPtData,
     [langHi]: langHiData,
     [langZh]: langZhCNData,
     // [langZhans]: langZhCNData,

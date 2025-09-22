@@ -5,11 +5,7 @@
   "description": "__MSG_AppDescription__",
   "version": "0.1.0",
   "version_name": "0.1.0",
-  "permissions": ["sidePanel"],
   "default_locale": "en",
-  "side_panel": {
-    "default_path": "index.html"
-  },
   "action": {
     "default_title": "Click to open panel",
     "default_popup": "index.html",

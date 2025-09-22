@@ -28,8 +28,8 @@ const root = document.getElementById('root')
 
 createRoot(root!).render(
     <StrictMode>
-        <RouterProvider router={router}/>,
-    </StrictMode>,
+        <RouterProvider router={router}/>
+    </StrictMode>
 )
 
 // 设置语言
@@ -46,4 +46,5 @@ if (descEl) {
 if (isRunningInChromeExtension()) {
     console.log('RunningInChromeExtension');
     window.document.documentElement.classList.add('chrome-mode')
+    window.document.body.classList.add('chrome-mode')
 }
