@@ -8,6 +8,9 @@
   "AppDescription": {
     "message": "Base58编码工具可以将字符串转换为 Base58 编码格式，常用于区块链地址等场景。"
   },
+  "AppLongDescription": {
+    "message": "eBase58工具可以将字符串转换为Base58编码格式，或者将以Base58编码的字符串还原成原始内容。这通常用于区块链地址等场景，并且支持多种Base58编码风格。Base58还可以用于将复杂字符串进行编码，生成的结果字符串不存在易混淆字符，便于人类易于阅读和和作为Url参数进行网络传送。"
+  },
   "ConvertButton": {
     "message": "转换为Base58"
   },

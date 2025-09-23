@@ -8,6 +8,9 @@
   "AppDescription": {
     "message": "Base58 編碼工具可以將字串轉換為 Base58 編碼格式，常用於區塊鏈地址等場景。"
   },
+  "AppLongDescription": {
+    "message": "eBase58工具可以將字串轉換為Base58編碼格式，或者將以Base58編碼的字串還原成原始內容。這通常用於區塊鏈地址等場景，並且支援多種Base58編碼風格。Base58還可以用於將複雜字串進行編碼，產生的結果字串不存在易混淆字元，便於人類易於閱讀和和作為Url參數進行網路傳送。"
+  },
   "ConvertButton": {
     "message": "轉換為 Base58"
   },

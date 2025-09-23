@@ -8,6 +8,9 @@
   "AppDescription": {
     "message": "La herramienta de codificación Base58 puede convertir cadenas al formato de codificación Base58, comúnmente utilizado en direcciones de blockchain y otros escenarios."
   },
+  "AppLongDescription": {
+    "message": "La herramienta eBase58 puede convertir cadenas de texto al formato de codificación Base58, o restaurar cadenas codificadas en Base58 a su contenido original. Esto se utiliza comúnmente en escenarios como direcciones de blockchain y admite varios estilos de codificación Base58. Base58 también se puede utilizar para codificar cadenas complejas, generando resultados sin caracteres confusos, lo que facilita la lectura humana y el uso como parámetros de URL para la transmisión en red."
+  },
   "ConvertButton": {
     "message": "Convertir a Base58"
   },

@@ -1,0 +1,21 @@
+eBase58工具可以將字串轉換為Base58編碼格式，或將以Base58編碼的字串還原成原始內容。這通常用於區塊鏈地址等場景，並且支援多種Base58編碼風格。
+Base58也可以用於將複雜字串進行編碼，產生的結果字串不含易混淆字元，便於人類閱讀，且適合作為URL參數進行網路傳送。
+
+Base58具有以下優勢：
+
+- 人類可讀，避免視覺混淆字元，適合手動輸入。
+- URL安全，字元集無需轉義，適合Web應用。
+- 緊湊性，比十六進位短約31.75%，適合儲存和傳輸。
+
+Base58應用場景示例如下：
+
+- 比特幣地址：1A1zP1eP5QGefi2DMPTefTL5SLmv7DivfNax
+- 對URL參數編碼形成易於閱讀的短連結：https://sfx.xyz/Cn8eVZg
+- 對UUID 550e8400-e29b-41d4-a716-446655440000進行Base58編碼後：9m4e2mr0ui3e8a215n4g，長度將縮短
+- IPFS星際檔案系統內容定址，IPFS CID：QmXoypizjW3WknFsiJnKLwHCnL72vedxjQkDDuP1mXWo6ucoa
+- 加密金鑰，編碼私鑰或種子：5HueCGU8rMjxEXxiPugD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJt
+
+注意事項：
+
+- Base58區分大小寫，系統需正確處理。
+- Base58長度雖比十六進位短，但仍比原始二進位資料長約36.5%，需權衡儲存需求。

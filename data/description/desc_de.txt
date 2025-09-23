@@ -1,0 +1,21 @@
+Das eBase58-Tool kann Zeichenfolgen in das Base58-Codierungsformat umwandeln oder Base58-codierte Zeichenfolgen in ihren ursprünglichen Inhalt zurückverwandeln. Dies wird häufig in Szenarien wie Blockchain-Adressen verwendet und unterstützt mehrere Base58-Codierungsstile.
+Base58 kann auch verwendet werden, um komplexe Zeichenfolgen zu codieren. Das resultierende Zeichenfolgenformat enthält keine leicht zu verwechselnden Zeichen, ist für Menschen leicht lesbar und eignet sich für die Übertragung als URL-Parameter.
+
+Base58 bietet folgende Vorteile:
+
+- Menschlich lesbar, vermeidet visuell verwirrende Zeichen, geeignet für die manuelle Eingabe.
+- URL-sicher, Zeichensatz muss nicht maskiert werden, geeignet für Webanwendungen.
+- Kompakt, etwa 31,75% kürzer als Hexadezimal, geeignet für Speicherung und Übertragung.
+
+Beispielhafte Anwendungsfälle für Base58:
+
+- Bitcoin-Adresse: 1A1zP1eP5QGefi2DMPTefTL5SLmv7DivfNax
+- Kodierung von URL-Parametern zur Erstellung leicht lesbarer Kurzlinks: https://sfx.xyz/Cn8eVZg
+- Kodierung der UUID 550e8400-e29b-41d4-a716-446655440000 mit Base58: 9m4e2mr0ui3e8a215n4g, die Länge wird verkürzt
+- IPFS InterPlanetary File System Content Addressing, IPFS CID: QmXoypizjW3WknFsiJnKLwHCnL72vedxjQkDDuP1mXWo6ucoa
+- Verschlüsselte Schlüssel, Kodierung von privaten Schlüsseln oder Seeds: 5HueCGU8rMjxEXxiPugD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJt
+
+Hinweise:
+
+- Base58 ist case-sensitiv, daher muss das System dies korrekt handhaben.
+- Obwohl Base58 kürzer als Hexadezimal ist, ist es immer noch etwa 36,5% länger als die ursprünglichen Binärdaten, daher sollten die Speicheranforderungen berücksichtigt werden.

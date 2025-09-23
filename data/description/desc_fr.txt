@@ -1,0 +1,21 @@
+L'outil eBase58 peut convertir des chaînes en format d'encodage Base58, ou restaurer des chaînes encodées en Base58 à leur contenu d'origine. Ceci est couramment utilisé dans des scénarios tels que les adresses blockchain et prend en charge plusieurs styles d'encodage Base58.
+Base58 peut également être utilisé pour encoder des chaînes complexes ; la chaîne résultante ne contient pas de caractères facilement confondus, ce qui facilite la lecture humaine et convient à la transmission comme paramètres d'URL.
+
+Avantages de Base58 :
+
+- Lisible par l'humain, évite les caractères visuellement confus, adapté à la saisie manuelle.
+- Sûr pour les URL, le jeu de caractères ne nécessite pas d'échappement, adapté aux applications web.
+- Compacité, environ 31,75% plus court que l'hexadécimal, adapté au stockage et à la transmission.
+
+Exemples de scénarios d'application de Base58 :
+
+- Adresse Bitcoin : 1A1zP1eP5QGefi2DMPTefTL5SLmv7DivfNax
+- Encodage de paramètres d'URL pour former des liens courts faciles à lire : https://sfx.xyz/Cn8eVZg
+- Encodage de l'UUID 550e8400-e29b-41d4-a716-446655440000 avec Base58 : 9m4e2mr0ui3e8a215n4g, la longueur est réduite
+- Addressage de contenu du système de fichiers interplanétaire IPFS, CID IPFS : QmXoypizjW3WknFsiJnKLwHCnL72vedxjQkDDuP1mXWo6ucoa
+- Clés chiffrées, encodage de clés privées ou de graines : 5HueCGU8rMjxEXxiPugD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJt
+
+Remarques :
+
+- Base58 est sensible à la casse, le système doit donc le gérer correctement.
+- Bien que Base58 soit plus court que l'hexadécimal, il reste environ 36,5% plus long que les données binaires originales, il faut donc tenir compte des besoins de stockage.

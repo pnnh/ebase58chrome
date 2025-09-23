@@ -1,0 +1,21 @@
+eBase58工具可以将字符串转换为Base58编码格式，或者将以Base58编码的字符串还原成原始内容。这通常用于区块链地址等场景，并且支持多种Base58编码风格。
+Base58还可以用于将复杂字符串进行编码，生成的结果字符串不存在易混淆字符，便于人类易于阅读和和作为Url参数进行网络传送。
+
+Base58具有以下优势：
+
+- 人类可读，避免视觉混淆字符，适合手动输入。
+- URL安全，字符集无需转义，适合 Web 应用。
+- 紧凑性，比十六进制短约 31.75%，适合存储和传输。
+
+Base58应用场景示例如下：
+
+- 比特币地址：1A1zP1eP5QGefi2DMPTefTL5SLmv7DivfNax
+- 对URL参数编码形成易于阅读的短链接：https://sfx.xyz/Cn8eVZg
+- 对UUID 550e8400-e29b-41d4-a716-446655440000 进行Base58 编码后：9m4e2mr0ui3e8a215n4g 长度将缩短
+- IPFS星际文件系统内容寻址，IPFS CID：QmXoypizjW3WknFsiJnKLwHCnL72vedxjQkDDuP1mXWo6ucoa
+- 加密密钥，编码私钥或种子：5HueCGU8rMjxEXxiPugD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJt
+
+需要注意事项：
+
+- Base58大小写敏感，需确保系统正确处理。
+- Base58长度虽比十六进制短，但仍比原始二进制数据长约 36.5%，需权衡存储需求。

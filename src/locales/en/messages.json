@@ -8,6 +8,9 @@
   "AppDescription": {
     "message": "The Base58 encoding tool can convert strings to Base58 encoding format, commonly used in blockchain addresses and other scenarios."
   },
+  "AppLongDescription": {
+    "message": "The eBase58 tool can convert strings to the Base58 encoding format or restore Base58-encoded strings to their original content. This is commonly used in scenarios such as blockchain addresses and supports various Base58 encoding styles. Base58 can also be used to encode complex strings, generating result strings that do not contain easily confused characters, making them easy for humans to read and suitable for use as URL parameters for network transmission."
+  },
   "ConvertButton": {
     "message": "Convert to Base58"
   },

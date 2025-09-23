@@ -8,6 +8,9 @@
   "AppDescription": {
     "message": "L'outil d'encodage Base58 peut convertir des chaînes au format d'encodage Base58, couramment utilisé dans les adresses blockchain et d'autres scénarios."
   },
+  "AppLongDescription": {
+    "message": "L'outil eBase58 peut convertir des chaînes de texte au format d'encodage Base58, ou restaurer des chaînes encodées en Base58 à leur contenu d'origine. Cela est couramment utilisé dans les adresses blockchain et autres scénarios, et prend en charge plusieurs styles d'encodage Base58. Base58 peut également être utilisé pour encoder des chaînes complexes, générant des résultats sans caractères ambigus, facilitant ainsi la lecture humaine et la transmission en tant que paramètres URL."
+  },
   "ConvertButton": {
     "message": "Convertir en Base58"
   },
